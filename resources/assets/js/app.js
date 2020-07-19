@@ -5,7 +5,15 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 require('./bootstrap');
-require('./jquery-ui');
-require('./Chart');
-require('./bulk');
+// require('./jquery-ui');
+// require('./Chart');
+// require('./bulk');
 
+window.Vue = require('vue');
+
+
+Vue.component('history-component', require('./components/History.vue'));
+
+const app = new Vue({
+    el: '#app'
+});
